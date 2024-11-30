@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  background: #121619;
+}
+
+.table {
+  display: table;
+  width: 50%;
+  border-collapse: collapse;
+  padding: 32px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  padding: 1px;
+  border: 1px solid #bdbdbd;
+  background-color: #21272A;
+  color: #ffffff;
+  font-family: "DIN Next LT Pro", sans-serif;
+}
+
+.table-header {
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "DIN Next LT Pro", sans-serif;
+}
+
+.list {
+  padding-bottom: 30px;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 100vw;
+}
+
+.homepage .divider {
+  height: 24px;
+  width: 1px;
+  position: relative;
+  top: 50%;
+}
+
+.homepage .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  padding: 32px 32px 0;
+  height: 100%;
+  width: 100vw;
+}
+
+.homepage .heading,
+.homepage .body {
+  font-family: "DIN Next LT Pro-Regular";
+  line-height: 20px;
+  letter-spacing: 0.16px;
+  margin-top: -1px;
+}
+
+.homepage .body {
+ width: 552.77px
+}
+
+.homepage .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 4px;
+  gap: 24px;
+  padding: 16px 0 8px;
+  width: 332px;
+  height: 320px;
+  background-color: #353535;
+}
+
+.homepage .card-1,
+.homepage .card-3,
+.homepage .card-4,
+.homepage .card-5,
+.homepage .card-6,
+.homepage .card-7,
+.homepage .card-8,
+.homepage .card-9 {
+  background-color: #00000080;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 4px;
+  flex-direction: column;
+  gap: 24px;
+  height: 320px;
+  max-height: 320px;
+  padding: 16px 0 8px;
+  width: 332px;
+}
+
+.homepage .card-1 {
+  background-image: url(../img/card-1@2x.png);
+}
+
+.homepage .card-4 {
+  background-image: url(../img/image-3@2x.png);
+}
+
+.homepage .card-5 {
+  background-image: url(../img/image-4@2x.png);
+}
+
+.homepage .card-6 {
+  background-image: url(../img/image-1@2x.png);
+}
+
+.homepage .card-7 {
+  background-image: url(../img/card-letter-01.png);
+}
+
+.homepage .card-8 {
+  background-image: url(../img/card-letter-02.png);
+}
+
+.homepage .card-9 {
+  background-image: url(../img/image-2@2x.png);
+}

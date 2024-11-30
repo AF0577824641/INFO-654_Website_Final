@@ -1,0 +1,175 @@
+
+@font-face {
+  font-family: "DIN Next LT Pro-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/DINNextLTPro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "DIN Next LT Pro-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/DINNextLTPro-Regular.otf") format("opentype");
+}
+
+.page a {
+  display: contents;
+  text-decoration: none;
+}
+
+.description {
+  flex-direction: column;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+  color: wheat;
+  font-family: DIN Next LT Pro-Regular
+}
+
+.nav-content {
+  align-self: stretch;
+  background-color: var(--vulcan);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--abbey);
+  display: flex;
+  height: 48px;
+  padding: 0px 0px 1px;
+  width: 100vw;
+}
+
+.nav-home {
+  gap: 3.4px;
+  height: 47px;
+  padding: 13.25px 34px 13.5px 18px;
+}
+
+.home-link {
+  letter-spacing: 0.16px;
+  line-height: 20px;
+  margin-top: -0.88px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+  font-family: DIN Next LT Pro-Regular;
+}
+
+.menubar {
+  position: relative;
+}
+
+.heading-top {
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  padding: 32px 32px 0px;
+}
+
+.frame-7 {
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.card-content {
+  gap: 16px;
+  width: 100vw;
+}
+
+.card-heading {
+  justify-content: space-between;
+  padding: 0px 17px 32px;
+  width: 100%;
+}
+
+.title {
+  position: relative;
+}
+
+.title-1 {
+  letter-spacing: 0.16px;
+  line-height: 18px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+  font-family: DIN Next LT Pro-Regular
+}
+
+.icon {
+  height: 8.18px;
+  position: relative;
+  width: 8.18px;
+}
+
+.footer {
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 1px;
+  gap: 40px;
+  height: 61px;
+  padding: 21px 32px 20px;
+  position: relative;
+  width: 100vw;
+  font-family: DIN Next LT Pro-Regular;
+  margin-top: 60px;
+}
+
+.footer-link {
+  justify-content: center;
+  position: relative;
+}
+
+.footer-text {
+  letter-spacing: 0.16px;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.card-container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.nav {
+  align-items: center;
+  position: relative;
+}
+
+.nav-link {
+  justify-content: center;
+  position: relative;
+  color: white;
+  padding: 30px 30px 30px 0px;
+}
+
+.nav-text {
+  width: 100%;
+}
+
+.text {
+  letter-spacing: 0.16px;
+  line-height: 20px;
+  margin-top: -2.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+
+.listing-heading {
+  gap: 54px;
+  padding: 30px 0px;
+  position: relative;
+  width: 100%;
+}
