@@ -28,3 +28,9 @@ body {
 			   color:black;
 			   margin: auto;
 			   padding: 10px;}
+#main {
+        		 width: 90%;
+        		 height: auto;
+          		background: yellow;
+          		margin: auto;
+          		padding:10px; }
