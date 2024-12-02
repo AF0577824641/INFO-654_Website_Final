@@ -1,4 +1,7 @@
-
+body {
+  background-color: darkolivegreen;
+  color: greenyellow;
+}
 @font-face {
   font-family: "DIN Next LT Pro-Bold";
   font-style: normal;
