@@ -30,6 +30,7 @@ body {
 			   padding: 10px;}
 #main {
         		 width: 90%;
+			position: relative;
           		background: white;
           		margin: auto;
           		padding:10px; }
