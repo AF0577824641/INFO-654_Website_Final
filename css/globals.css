@@ -15,9 +15,16 @@ body {
   src: url("../fonts/DINNextLTPro-Regular.otf") format("opentype");
 }
 @header {
-			   width: 78%;
+			   width: auto;
 			   text-align: center;
 			   border-radius: 5px;
 			   background:rosybrown;
 			   color:black;
 			   margin: auto;}
+@nav {
+			   width: auto;
+			   text-align: right;
+			   background: aliceblue;
+			   color:black;
+			   margin: auto;
+			   padding: 10px;}
