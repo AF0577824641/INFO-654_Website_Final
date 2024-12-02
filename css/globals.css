@@ -24,13 +24,14 @@ body {
 #nav {
 			   width: 90%;
 			   float: right;
+			position: relative;
 			   background: aliceblue;
 			   color:black;
 			   margin: auto;
 			   padding: 10px;}
 #main {
         		 width: 90%;
-			position: fixed;
+			position: relative;
           		background: white;
           		margin: 10px;
           		padding:10px; }
