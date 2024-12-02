@@ -31,7 +31,7 @@ body {
 			   padding: 10px;}
 #main {
         		 width: 90%;
-			position: absolute;
+			height: relative;
           		background: white;
           		margin: auto;
           		padding:10px; }
