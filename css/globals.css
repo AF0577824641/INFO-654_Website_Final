@@ -23,7 +23,7 @@ body {
 			   margin: auto;}
 #nav {
 			   width: auto;
-			   text-align: right;
+			   float: right;
 			   background: aliceblue;
 			   color:black;
 			   margin: auto;
