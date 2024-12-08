@@ -1,5 +1,7 @@
 /* All Layouts - Global */
-
+body {
+    background-color: #596a37;
+}
 .global {
   align-items: flex-start;
   display: flex;

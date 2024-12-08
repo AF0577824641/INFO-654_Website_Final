@@ -1,16 +1,16 @@
 
 /* Font Faces */
 @font-face {
-		font-family: "DIN Next LT Pro-Bold";
+		font-family: "Williams Calson-Regular";
 		font-style: normal;
 		font-weight: 700;
-		src: url("../fonts/DINNextLTPro-Bold.otf") format("opentype");
+		src: url("../fonts/WilliamsCalson-Regular.ttf") format("trueType");
 }
 @font-face {
-		font-family: "DIN Next LT Pro-Regular";
-		font-style: normal;
+		font-family: "Williams Calson-Italic";
+		font-style: italic;
 		font-weight: 400;
-		src: url("../fonts/DINNextLTPro-Regular.otf") format("opentype");
+		src: url("../fonts/WilliamsCalson-Italic.ttf") format("truetype");
 }
 
 /* Header Section */
@@ -59,21 +59,6 @@ root {
 }
 
 /* Typography */
-.inter-medium-white-20px {
-		color: var(--white);
-		font-family: var(--font-family-inter);
-		font-size: var(--font-size-l);
-		font-style: normal;
-		font-weight: 500;
-}
-
-.inter-medium-white-25-4px {
-		color: var(--white);
-		font-family: var(--font-family-inter);
-		font-size: 25.4px;
-		font-style: normal;
-		font-weight: 500;
-}
 
 .screen a {
 		display: contents;
@@ -82,6 +67,7 @@ root {
 
 * {
 		box-sizing: border-box;
+		/* background-color: beige; */
 }
 
 .h1 {
@@ -126,7 +112,7 @@ root {
 
 .body-shared {
 		color: var(--valhalla);
-		font-family: Arial;
+		font-family: var(--font-family-williams_calson-regular);
 		font-size: var(--font-size-m);
 		font-weight: 400;
 		letter-spacing: 0;
@@ -144,6 +130,7 @@ root {
 		justify-content: space-between;
 		padding: 14px 61px;
 		width: 100%;
+		mix-blend-mode: difference;
 }
 
 .footer-buttons {
@@ -178,9 +165,9 @@ footer-copyright {
 .footer-txt {
 		display: inline-flex;
 		flex-direction: column;
-		color: black;
-		font-family: Arial;
-		font-size: 14px;
+		color: white;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 15px;
 		font-weight: 500;
 		letter-spacing: 0.21px;
 		line-height: 32px;
@@ -330,10 +317,19 @@ footer-copyright {
 
 .h2 {
 		color: white;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 100px;
+		font-family: Wil;
+		font-size: 120px;
 		font-style: normal;
 		font-weight: 400;
+	}
+
+.h2-italic {
+		color: white;
+		font-family: williams_calson-italic;
+		font-size: 120px;
+		font-style: italic;
+		font-weight: 400;
+
 }
 .api-used {
 		letter-spacing: 0;
@@ -346,7 +342,7 @@ footer-copyright {
 
 .h4 {
   color: var(--valhalla);
-  font-family: Arial;
+  font-family: var(--font-family-williams_calson-regular);
   font-size: var(--font-size-xl);
   font-style: normal;
   font-weight: 400;
@@ -355,16 +351,15 @@ footer-copyright {
 .body-txt {
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
-    letter-spacing: 0;
-    line-height: 23.6px;
+    line-height: 25.6px;
     margin-top: -1.27px;
     position: relative;
     width: 602.99px;
   }
 .subtitle-italic {
-  font-family: Arial;
+  font-family: WilliamsCalson-Italic;
   font-style: italic;
   font-weight: 400;
   color: var(--valhalla);
@@ -381,7 +376,7 @@ footer-copyright {
 
 .subtitle {
   color: white;
-  font-family: Arial;
+  font-family: WilliamsCalson-Regular;
   font-size: 50px;
   font-style: normal;
   font-weight: 400;
