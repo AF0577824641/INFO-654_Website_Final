@@ -1,7 +1,5 @@
 /* All Layouts - Global */
-body {
-    background-color: #596a37;
-}
+
 .global {
   align-items: flex-start;
   display: flex;
@@ -12,16 +10,141 @@ body {
 .global .hero {
   align-items: flex-start;
   align-self: stretch;
-  background-color: #00000033;
+  background-color: var(--light-purple);
   background-image: url(../img/hero-2.svg);
   background-position: 50% 50%;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  height: 603px;
+  height: 500px;
+  justify-content: flex-end;
+  padding: 0px 50px 20px;
+  position: relative;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+.global .hero-seasons {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color:var(--light-purple);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
   justify-content: flex-end;
   padding: 0px 50px 20px;
   position: relative;
   width: 100%;
   flex-wrap: wrap;
+}
+/* Home Content */
+.home-content {
+		align-items: flex-start;
+		align-self: stretch;
+		background-color: darkolivegreen;
+		display: flex;
+		flex: 0 0 auto;
+		justify-content: space-between;
+		padding: 30px 50px 60.95px;
+		position: relative;
+		width: 100%;
+		height: 100VH;
+}
+
+.subtitle {
+		letter-spacing: 0;
+		line-height: 50px;
+		margin-top: -1.27px;
+		position: relative;
+		width: 602.99px;
+}
+
+.span1-1 {
+		color: var(--valhalla);
+		font-size: var(--font-size-xl);
+}
+
+.body-shared {
+		color: var(--valhalla);
+		font-family: var(--font-family-williams_calson-regular);
+		font-size: var(--font-size-m);
+		font-weight: 400;
+		letter-spacing: 0;
+		line-height: 23.6px;
+		margin-top: -1.27px;
+		position: relative;
+		width: 602.99px;
+}
+/* Seasons Page */
+
+ .row {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+  height: 183px;
+  justify-content: center;
+  padding: 92px 60.95px 48px;
+  position: relative;
+  width: 100vw;
+  display: block;
+}
+
+.row-title-1 {
+  letter-spacing: 0;
+  line-height: 100px;
+  margin-bottom: -27.50px;
+  margin-top: -29.50px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.seasons-item {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: white;
+  border-color: var(--dark-purple);
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+  height: 183px;
+  justify-content: center;
+  padding: 48px 60.95px 48px;
+  position: relative;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+.seasons-item:hover {
+  background-color: var(--dark-purple);
+  transition: all 0.3s ease;
+  color: var(--white)
+}
+.seasons-item.row-title-txt a {
+  color: inherit;
+  text-decoration: none;
+  display: block; /* Ensures the link area covers the whole row */
+}
+
+.row-title {
+  letter-spacing: 0;
+  line-height: 100px;
+  margin-bottom: -26.50px;
+  margin-top: -30.50px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+.row-title-txt {
+  color: var(--dark-purple);
+  font-family: var(--w-regular);
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  display: block;
 }

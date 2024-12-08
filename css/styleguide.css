@@ -1,0 +1,35 @@
+
+/* Font Faces */
+@font-face {
+		font-family: "Williams Calson-Regular";
+		font-style: normal;
+		font-weight: 700;
+		src: url("../fonts/WilliamsCalson-Regular.ttf") format("trueType");
+}
+@font-face {
+		font-family: "Williams Calson-Italic";
+		font-style: italic;
+		font-weight: 400;
+		src: url("../fonts/WilliamsCalson-Italic.ttf") format("truetype");
+}
+
+ :root {
+
+/* Colors Variable */
+ --valhalla: #2b1a47;
+ --white: #ffffff;
+ --black: #000000;
+ --light-purple: #665485;
+ --dark-purple: #281b44;
+
+ /* Font Family */
+  --williams_calson-regular: "Williams Calson-Regular", Helvetica;
+
+/* Font Sizes */
+ --font-size-l: 36.6px;
+   --font-size-m: 17.8px;
+   --font-size-s: 14px;
+   --font-size-xl: 100px;
+   --font-size-xs: 13px;
+   --font-size-xxl: 140px;
+}
