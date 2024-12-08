@@ -180,7 +180,7 @@ footer-copyright {
 		flex-direction: column;
 		color: black;
 		font-family: Arial;
-		font-size: 12px;
+		font-size: 14px;
 		font-weight: 500;
 		letter-spacing: 0.21px;
 		line-height: 32px;
@@ -192,6 +192,7 @@ footer-copyright {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		flex-wrap: wrap;
 }
 .footer-txt-b {
     color: white;
