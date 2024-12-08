@@ -1,43 +1,25 @@
-:root {
-  --bon-jour: #e0dde5;
-  --grimgrainscomblack: #000000;
-  --grimgrainscomwhite: #000000;
-  --logan: #b4a3d0;
-  --spring-wood: #f7f7f3;
-  --valhalla: #2b1a47;
-  --white: #ffffff;
+/* All Layouts - Global */
 
-  --font-size-l: 20px;
-  --font-size-m: 18px;
-  --font-size-s: 17.8px;
-  --font-size-xl: 20.5px;
-  --font-size-xs: 15px;
-  --font-size-xxl: 30.5px;
-  --font-size-xxs: 14px;
-
-  --font-family-inter: "Inter", Helvetica;
-  --font-family-williams_calson-regular: "Williams Calson-Regular", Helvetica;
-}
-.inter-medium-white-20px {
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-l);
-  font-style: normal;
-  font-weight: 500;
+.global {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-.inter-medium-white-25-4px {
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: 25.4px;
-  font-style: normal;
-  font-weight: 500;
-}
-
-.williamscalson-regular-normal-valhalla-100px {
-  color: var(--valhalla);
-  font-family: var(--font-family-williams_calson-regular);
-  font-size: 100px;
-  font-style: normal;
-  font-weight: 400;
+.global .hero {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: #00000033;
+  background-image: url(../img/hero-2.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 603px;
+  justify-content: flex-end;
+  padding: 0px 50px 20px;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
 }
