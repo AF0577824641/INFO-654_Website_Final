@@ -198,8 +198,8 @@
   display: flex table-row;
   background-color: var(--white);
   border-color: var(--dark-purple);
-  border-top-style: solid;
-  border-top-width: 2px;
+  border-style: solid;
+  border-width: 2px;
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
