@@ -210,8 +210,8 @@
 
 .recipe-cell {
    align-self: stretch;
-   border: solid;
-   border-width: thin;
+   background-color: #9e9e9e;
+   border-radius: 5px;
    padding: 5px;	
    height: 100%;
    width: fit-content;
