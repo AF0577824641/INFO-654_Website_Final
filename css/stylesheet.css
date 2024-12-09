@@ -195,7 +195,7 @@
 .recipe-row {
   align-items: flex-start;
   align-self: stretch;
-  display: flex table-row;
+  display: flex;
   background-color: var(--white);
   border-color: var(--dark-purple);
   border-style: solid;
@@ -211,7 +211,7 @@
 }
 
 .recipe-cell {
-   display: table-cell;
+   align-self: stretch;
    border: solid;
    border-width: thin;
    padding: 5px;	
