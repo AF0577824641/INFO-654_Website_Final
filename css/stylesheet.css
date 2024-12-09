@@ -205,7 +205,6 @@
   height: 100%;
   position: relative;
   justify-content: center;
-  width: 100%;
   flex-wrap: wrap;
   display: block;
 }
@@ -219,7 +218,7 @@
    padding-right: 5px;
    height: 100%;
    position: relative;
-   width: 100vw;
+   width: 100%;
    flex-wrap: wrap;
 }
 
