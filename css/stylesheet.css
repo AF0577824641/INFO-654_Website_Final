@@ -214,7 +214,8 @@
    border-radius: 5px;
    margin-bottom: 20px;
    padding: 5px;	
-   width: fit-content;
+   height: 100%
+   width: auto;
 }
 .recipe-cell:hover {
   background-color: var(--dark-purple);
