@@ -216,6 +216,7 @@
    border-width: thin;
    padding-left: 5px;
    padding-right: 5px;
+   padding-top: 5px;	
    height: 100%;
    width: 30px;
 }
