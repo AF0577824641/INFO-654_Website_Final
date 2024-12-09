@@ -200,7 +200,7 @@
   border-top-style: solid;
   border-top-width: 2px;
   padding: 40px;
-  display: table-row;
+  display: flex;
   flex-direction: row;
   height: 100%;
   position: relative;
@@ -218,3 +218,4 @@
    padding-right: 5px;
    height: 100%;
 }
+
