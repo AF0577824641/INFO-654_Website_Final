@@ -16,7 +16,23 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 670px;
+  justify-content: flex-end;
+  padding: 0px 50px 20px;
+  position: relative;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+.global .hero-2 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--light-purple);
+  background-image: url(../img/hero-3.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 660px;
   justify-content: flex-end;
   padding: 0px 50px 20px;
   position: relative;
@@ -120,6 +136,24 @@
   width: 100vw;
   flex-wrap: wrap;
 }
+
+.seasons-item-inact {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: white;
+  border-color: var(--dark-purple);
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+  height: 183px;
+  justify-content: center;
+  padding: 48px 60.95px 48px;
+  position: relative;
+  width: 100vw;
+  flex-wrap: wrap;
+}
 .seasons-item:hover {
   background-color: var(--dark-purple);
   transition: all 0.3s ease;
@@ -147,4 +181,11 @@
   font-style: normal;
   font-weight: 400;
   display: block;
+}
+.row-title-inactive {
+  color: var(--dark-purple);
+  font-family: var(--w-regular);
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
 }
