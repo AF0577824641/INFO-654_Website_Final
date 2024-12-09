@@ -199,11 +199,15 @@
   border-color: var(--dark-purple);
   border-top-style: solid;
   border-top-width: 2px;
+  padding: 40px;
   display: table-row;
+  flex-direction: row;
   height: 100%;
   position: relative;
+  justify-content: center;
   width: 100vw;
   flex-wrap: wrap;
+  display: block;
 }
 
 .recipe-cell {
