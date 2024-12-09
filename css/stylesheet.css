@@ -200,6 +200,8 @@
   border-color: var(--dark-purple);
   border-top-style: solid;
   border-top-width: 2px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 30px;
   gap: 10px;
   width: 80%;
