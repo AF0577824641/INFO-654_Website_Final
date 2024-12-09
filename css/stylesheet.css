@@ -193,30 +193,26 @@
 /* Individual Season Page */
 
 .recipe-row {
-  align-items: flex-start;
-  align-self: stretch;
-  background-color: white;
+  background-color: yellow;
   border-color: var(--dark-purple);
   border-top-style: solid;
   border-top-width: 2px;
   padding: 40px;
   gap: 10px;
-  display: flex;
-  flex-direction: row;
+  display: table-row;
   height: 100%;
   position: relative;
   justify-content: center;
-  flex-wrap: wrap;
   display: table-row;
 }
 
 .recipe-cell {
    display: table-cell;
-   display: flex;
    border: solid;
    border-width: thin;
    padding-left: 5px;
    padding-right: 5px;
    height: 100%;
+   width: auto;
 }
 
