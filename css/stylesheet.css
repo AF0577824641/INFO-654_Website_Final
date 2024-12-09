@@ -217,7 +217,7 @@
    border-width: thin;
    padding: 5px;	
    height: 100%;
-   width: 80%;
+   width: fit-content;
 }
 
 .recipe-txt {
