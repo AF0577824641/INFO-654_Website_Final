@@ -217,6 +217,11 @@
    height: 100%;
    width: fit-content;
 }
+.recipe-cell:hover {
+  background-color: var(--dark-purple);
+  transition: all 0.3s ease;
+  color: var(#9e9e9e)
+}
 
 .recipe-txt {
     color: var(--dark-purple);
