@@ -211,7 +211,7 @@
 }
 
 .recipe-cell {
-   display: flex table-cell;
+   display: table-cell;
    border: solid;
    border-width: thin;
    padding: 5px;	
