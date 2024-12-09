@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Nutrition Calculator</title>
+    <style>
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      h1, h2 { text-align: center; }
+      .hidden { display: none; }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .btn-success {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+      }
+
+      .btn-secondary {
+        background-color: #6c757d;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+      }
+
+      .btn:hover { opacity: 0.9; }
+
+      .food-breakdown-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      }
+
+      .food-breakdown-table thead th {
+        border-bottom: 2px solid #ddd;
+        text-align: left;
+        padding: 12px;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+      }
+
+      .food-breakdown-table tbody tr { border-bottom: 1px solid #ddd; }
+      .food-breakdown-table tbody tr:hover { background-color: #f9f9f9; }
+
+      .food-breakdown-table td {
+        padding: 12px;
+        vertical-align: middle;
+      }
+
+      .food-breakdown-table td img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+
+      .food-breakdown-table td a {
+        color: #28a745;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .food-breakdown-table td a:hover { text-decoration: underline; }
+
+      .food-breakdown-table .info-icon {
+        color: #333;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .nf {
+        border: 1px solid #000;
+        padding: 6px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 14px;
+        width: 280px;
+      }
+
+      .nf-title {
+        font-size: 2.15em;
+        line-height: 1.15em;
+        margin-top: -6px;
+        font-family: 'Archivo Black', sans-serif;
+      }
+
+      .nf-line { border-top: 1px solid #000; padding: 5px 0; }
+      .nf-highlight { font-weight: bold; }
+      .nf-pr { float: right; }
+
+      .nf-bar1, .nf-bar2 { background-color: #000; }
+      .nf-bar1 { height: 5px; }
+      .nf-bar2 { height: 10px; }
+
+      .nf-indent { padding-left: 16px; }
+      .nf-text-right { text-align: right; }
+
+      .nf-footnote {
+        padding-top: 10px;
+        font-size: 0.85em;
+        line-height: 1em;
+      }
+
+      .results-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Food Nutrition Calculator</h1>
+      <p>Enter food items like "1 cup mashed potatoes and 2 tbsp gravy" to calculate nutritional facts. Supports tens of thousands of foods!</p>
+
+      <textarea id="foodInput" placeholder="Enter your food items here..." cols="30" rows="5" class="form-control"></textarea>
+      <br />
+      <div>
+        <button id="calculateBtn" class="btn btn-success">Calculate Foods</button>
+        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+      </div>
+
+      <div class="results-container hidden" id="resultsContainer">
+        <div id="resultsSection">
+          <h2>Food Breakdown</h2>
+          <table class="food-breakdown-table">
+            <thead>
+              <tr>
+                <th>Image</th><th>Qty</th><th>Unit</th><th>Food</th>
+                <th>Calories</th><th>Weight</th><th>Food Group</th><th></th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody"></tbody>
+          </table>
+        </div>
+
+        <div id="nutritionFacts" class="nf">
+          <div class="nf-title" tabindex="0">Nutrition Facts</div>
+          <div class="nf-line">
+            <label for="servingsInput" class="nf-highlight">Servings:</label>
+            <input type="number" id="servingsInput" class="form-control" min="1" value="1"/>
+          </div>
+          <div class="nf-bar2"></div>
+          <div class="nf-amount-per-serving" tabindex="0">Amount Per Serving</div>
+          <div class="nf-calories" tabindex="0">
+            <span class="">Calories</span>
+            <span class="nf-pr" id="calories">0 kcal</span>
+          </div>
+          <div class="nf-bar1"></div>
+          <div class="nf-line nf-text-right">
+            <span class="nf-highlight nf-percent-dv">% Daily Value*</span>
+          </div>
+          <div class="nf-line" tabindex="0">
+            <span class="nf-highlight">Total Fat</span>
+            <span class="" id="totalFat">0 g</span>
+            <span class="nf-highlight nf-pr" id="totalFatDV">0%</span>
+          </div>
+          <div class="nf-line nf-indent" tabindex="0">
+            <span>Saturated Fat</span>
+            <span class="" id="saturatedFat">0 g</span>
+            <span class="nf-highlight nf-pr" id="saturatedFatDV">0%</span>
+          </div>
+          <div class="nf-line" tabindex="0">
+            <span class="nf-highlight">Cholesterol</span>
+            <span class="" id="cholesterol">0 mg</span>
+            <span class="nf-highlight nf-pr" id="cholesterolDV">0%</span>
+          </div>
+          <div class="nf-line" tabindex="0">
+            <span class="nf-highlight">Sodium</span>
+            <span class="" id="sodium">0 mg</span>
+            <span class="nf-highlight nf-pr" id="sodiumDV">0%</span>
+          </div>
+          <div class="nf-line" tabindex="0">
+            <span class="nf-highlight">Total Carbohydrates</span>
+            <span class="" id="carbs">0 g</span>
+            <span class="nf-highlight nf-pr" id="carbsDV">0%</span>
+          </div>
+          <div class="nf-line nf-indent" tabindex="0">
+            <span>Dietary Fiber</span>
+            <span class="" id="fiber">0 g</span>
+            <span class="nf-highlight nf-pr" id="fiberDV">0%</span>
+          </div>
+          <div class="nf-line nf-indent" tabindex="0">
+            <span>Sugars</span>
+            <span class="" id="sugars">0 g</span>
+          </div>
+          <div class="nf-line" tabindex="0">
+            <span class="nf-highlight">Protein</span>
+            <span class="" id="protein">0 g</span>
+          </div>
+          <div class="nf-bar2"></div>
+          <div class="nf-footnote">
+            <span tabindex="0">The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2000 calories a day is used for general nutrition advice.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const APP_ID = "973ec549";
+      const APP_KEY = "2c457ca678c66791e5ce97158e7322f0";
+
+      const DAILY_VALUES = {
+        totalFat: 78,
+        saturatedFat: 20,
+        cholesterol: 300,
+        sodium: 2300,
+        carbs: 275,
+        fiber: 28
+      };
+
+      let currentFoods = [];
+
+      const updateResults = (foods) => {
+        const resultsBody = document.getElementById("resultsBody");
+        resultsBody.innerHTML = "";
+
+        foods.forEach((food) => {
+          const foodGroup = food.tags && food.tags.food_group ? food.tags.food_group : "N/A";
+          const row = `
+            <tr>
+              <td><img src="${food.photo.thumb}" alt="${food.food_name}" width="50" /></td>
+              <td>${food.serving_qty}</td><td>${food.serving_unit}</td>
+              <td><a href="#">${food.food_name}</a></td>
+              <td>${food.nf_calories.toFixed(2)} kcal</td>
+              <td>${food.serving_weight_grams.toFixed(2)} g</td>
+              <td>${foodGroup}</td>
+              <td><i class="info-icon fa fa-info-circle"></i></td>
+            </tr>
+          `;
+          resultsBody.innerHTML += row;
+        });
+
+        document.getElementById("resultsContainer").classList.remove("hidden");
+      };
+
+    const clearResults = () => {
+      document.getElementById("resultsBody").innerHTML = "";
+      document.getElementById("calories").textContent = "0 kcal";
+      document.getElementById("totalFat").textContent = "0 g";
+      document.getElementById("totalFatDV").textContent = "0%";
+      document.getElementById("saturatedFat").textContent = "0 g";
+      document.getElementById("saturatedFatDV").textContent = "0%";
+      document.getElementById("cholesterol").textContent = "0 mg";
+      document.getElementById("cholesterolDV").textContent = "0%";
+      document.getElementById("sodium").textContent = "0 mg";
+      document.getElementById("sodiumDV").textContent = "0%";
+      document.getElementById("carbs").textContent = "0 g";
+      document.getElementById("carbsDV").textContent = "0%";
+      document.getElementById("fiber").textContent = "0 g";
+      document.getElementById("fiberDV").textContent = "0%";
+      document.getElementById("sugars").textContent = "0 g";
+      document.getElementById("protein").textContent = "0 g";
+      document.getElementById("resultsContainer").classList.add("hidden");
+    };
+
+    const updateNutritionFacts = (foods, servings = 1) => {
+      const totals = foods.reduce((acc, food) => {
+        acc.calories += (food.nf_calories || 0) * servings;
+        acc.totalFat += (food.nf_total_fat || 0) * servings;
+        acc.saturatedFat += (food.nf_saturated_fat || 0) * servings;
+        acc.cholesterol += (food.nf_cholesterol || 0) * servings;
+        acc.sodium += (food.nf_sodium || 0) * servings;
+        acc.carbs += (food.nf_total_carbohydrate || 0) * servings;
+        acc.fiber += (food.nf_dietary_fiber || 0) * servings;
+        return acc;
+      }, {
+        calories: 0,
+        totalFat: 0,
+        saturatedFat: 0,
+        cholesterol: 0,
+        sodium: 0,
+        carbs: 0,
+        fiber: 0
+      });
+
+      const summarizedCalories = (totals.calories / 1000).toFixed(2);
+
+      document.getElementById("calories").textContent = `${summarizedCalories} cal`;
+      document.getElementById("totalFat").textContent = `${totals.totalFat.toFixed(2)} g`;
+      document.getElementById("totalFatDV").textContent = `${((totals.totalFat / DAILY_VALUES.totalFat) * 100).toFixed(2)}%`;
+      document.getElementById("saturatedFat").textContent = `${totals.saturatedFat.toFixed(2)} g`;
+      document.getElementById("saturatedFatDV").textContent = `${((totals.saturatedFat / DAILY_VALUES.saturatedFat) * 100).toFixed(2)}%`;
+      document.getElementById("cholesterol").textContent = `${totals.cholesterol.toFixed(2)} mg`;
+      document.getElementById("cholesterolDV").textContent = `${((totals.cholesterol / DAILY_VALUES.cholesterol) * 100).toFixed(2)}%`;
+      document.getElementById("sodium").textContent = `${totals.sodium.toFixed(2)} mg`;
+      document.getElementById("sodiumDV").textContent = `${((totals.sodium / DAILY_VALUES.sodium) * 100).toFixed(2)}%`;
+      document.getElementById("carbs").textContent = `${totals.carbs.toFixed(2)} g`;
+      document.getElementById("carbsDV").textContent = `${((totals.carbs / DAILY_VALUES.carbs) * 100).toFixed(2)}%`;
+      document.getElementById("fiber").textContent = `${totals.fiber.toFixed(2)} g`;
+      document.getElementById("fiberDV").textContent = `${((totals.fiber / DAILY_VALUES.fiber) * 100).toFixed(2)}%`;
+    };
+
+    document.getElementById("calculateBtn").addEventListener("click", () => {
+      const input = document.getElementById("foodInput").value.trim();
+      if (!input) {
+        alert("Please enter food items.");
+        return;
+      }
+
+      fetch("https://trackapi.nutritionix.com/v2/natural/nutrients", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-app-id": APP_ID,
+          "x-app-key": APP_KEY,
+        },
+        body: JSON.stringify({ query: input }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.foods && data.foods.length > 0) {
+            currentFoods = data.foods;
+            updateResults(data.foods);
+            updateNutritionFacts(data.foods);
+          } else {
+            alert("No results found. Please try different input.");
+            clearResults();
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          alert("An error occurred. Please try again.");
+          clearResults();
+        });
+    });
+
+    document.getElementById("servingsInput").addEventListener("input", (event) => {
+      const servings = parseFloat(event.target.value);
+      if (servings > 0 && currentFoods.length > 0) {
+        updateNutritionFacts(currentFoods, servings);
+      } else {
+        clearResults();
+      }
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      document.getElementById("foodInput").value = "";
+      document.getElementById("servingsInput").value = 1;
+      clearResults();
+    });
+
+    </script>
+  </body>
+</html>
