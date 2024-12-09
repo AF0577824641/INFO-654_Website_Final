@@ -73,7 +73,7 @@ The project will be built using:
 
 ## APIs and Data Sources
 
-We plan to integrate the **Edamam Recipe Search API** ([https://developer.edamam.com/recipe-demo](https://developer.edamam.com/recipe-demo)) to provide:
+We plan to integrate the **Nutritionix API** (https://www.nutritionix.com/business/api?creative=344317953788&keyword=food%20nutrition%20api&matchtype=b&network=g&device=m) to provide:
 
 - Comprehensive recipe data.
 - Allergy and dietary restriction information.
