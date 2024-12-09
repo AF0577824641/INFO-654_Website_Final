@@ -217,6 +217,10 @@
    max-width: 100%;
 }
 
+.recipe-cell img{
+height: auto;
+   max-width: 100%;
+}
 .recipe-cell:hover {
   background-color: var(--dark-purple);
   transition: all 0.3s ease;
