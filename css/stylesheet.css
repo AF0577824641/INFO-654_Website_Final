@@ -97,8 +97,8 @@
  .row {
   align-items: flex-start;
   align-self: stretch;
-  background-color: var(--white);
   display: flex;
+  background-color: var(--white);
   flex-direction: column;
   gap: 140px;
   height: 183px;
@@ -193,13 +193,16 @@
 /* Individual Season Page */
 
 .recipe-row {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex table-row;
   background-color: yellow;
   border-color: var(--dark-purple);
   border-top-style: solid;
   border-top-width: 2px;
   padding: 10px;
   gap: 10px;
-  display: table-row;
+  width: 80%;
   height: 100%;
   position: relative;
   justify-content: center;
