@@ -189,3 +189,28 @@
   font-style: normal;
   font-weight: 400;
 }
+
+/* Individual Season Page */
+
+.recipe-row {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: white;
+  border-color: var(--dark-purple);
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: table-row;
+  height: 100%;
+  position: relative;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+
+.recipe-cell {
+   display: table-cell;
+   border: solid;
+   border-width: thin;
+   padding-left: 5px;
+   padding-right: 5px;
+   height: 100%;
+}
