@@ -2,34 +2,41 @@ body {
     overflow-x: hidden
 }
 /* All Layouts - Global */
-
 .global {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		position: relative;
 }
 
-.global .hero {
-  align-items: flex-start;
-  align-self: stretch;
-  background-color: var(--light-purple);
-  background-image: url(../img/hero-2.svg);
-  background-position: 50% 50%;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  height: 603px;
-  justify-content: flex-end;
-  padding: 0px 50px 20px;
-  position: relative;
-  width: 100%;
-  flex-wrap: wrap;
-}
+/* Heroes */
+.global .hero,
+.global .hero-2,
 .global .hero-seasons {
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: var(--light-purple);
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 603px;
+    justify-content: flex-end;
+    padding: 0px 50px 20px;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+}
+  .global .hero-home {
+ background-image: url(../img/hero-2.svg);
+}
+.global .hero-2 {
+  background-image: url(../img/hero-3.svg);
+
+}
+.global .hero-rs {
   align-items: flex-start;
   align-self: stretch;
-  background-color:var(--light-purple);
   background-position: 50% 50%;
   background-size: cover;
   display: flex;
@@ -40,6 +47,25 @@ body {
   position: relative;
   width: 100%;
   flex-wrap: wrap;
+}
+
+.global .hero-seasons {
+  background-color: var(--light-purple);
+}
+
+.global .hero-autumn {
+  background-color: var(--dark-brown);
+}
+
+.global .hero-winter {
+  background-color: var(--dark-blue);
+}
+
+.global .hero-spring {
+  background-color: var(--green);
+}
+.global .hero-summer {
+  background-color: var(--yellow);
 }
 /* Header Section */
 #header {
@@ -209,7 +235,9 @@ footer-copyright {
 		flex-direction: column;
 		padding: 2px 0px 0px;
 		position: relative;
+		width: 40%;
 }
+
 
 /* Navbar Section */
 .nav-content {

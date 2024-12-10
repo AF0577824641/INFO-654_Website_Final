@@ -1,78 +1,24 @@
-/* All Layouts - Global */
 
-.global {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.global .hero {
-  align-items: flex-start;
-  align-self: stretch;
-  background-color: var(--light-purple);
-  background-position: 50% 50%;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  height: 670px;
-  justify-content: flex-end;
-  padding: 0px 50px 20px;
-  position: relative;
-  width: 100vw;
-  flex-wrap: wrap;
-}
-  .global .hero-home {
- background-image: url(../img/hero-2.svg);
-}
-.global .hero-2 {
-  background-image: url(../img/hero-3.svg);
-
-}
-.global .hero-rs {
-  align-items: flex-start;
-  align-self: stretch;
-  background-position: 50% 50%;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  height: 450px;
-  justify-content: flex-end;
-  padding: 0px 50px 20px;
-  position: relative;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.global .hero-seasons {
-  background-color: var(--light-purple);
-}
-
-.global .hero-autumn {
-  background-color: var(--dark-brown);
-}
-
-.global .hero-winter {
-  background-color: var(--dark-blue);
-}
-
-.global .hero-spring {
-  background-color: var(--green);
-}
-.global .hero-summer {
-  background-color: var(--yellow);
-}
-/* Home Content */
-.home-content {
+/* Content Areas */
+.home-content,
+.api-content {
 		align-items: flex-start;
 		align-self: stretch;
-		background-color: darkolivegreen;
 		display: flex;
 		flex: 0 0 auto;
 		justify-content: space-between;
 		padding: 30px 50px 60.95px;
 		position: relative;
 		width: 100%;
-		height: 100VH;
+		height: 100vh;
+}
+
+.home-content {
+		background-color: darkolivegreen;
+}
+
+.api-content {
+		background-color: #243265;
 }
 .page-winter {
 		align-items: flex-start;
@@ -253,4 +199,176 @@ height: auto;
     margin: 5px;
     position: relative;
     mix-blend-mode: difference;
+  }
+  /* API Layout Components */
+  .btn {
+		padding: 10px 20px;
+		font-size: 16px;
+		cursor: pointer;
+		margin-right: 10px;
+		border: none;
+		border-radius: 4px;
+  }
+
+  .btn-success {
+		background-color: #ffffff;
+		color: #2c1b47;
+  }
+
+  .btn-secondary {
+		background-color: #ffffff;
+		color: #2c1b47;
+  }
+
+  /* Food Breakdown Table */
+  .food-breakdown-table {
+		border-collapse: collapse;
+		margin-top: 20px;
+		font-family: Arial;
+		font-size: 19px;
+		flex-direction: column;
+		width: auto;
+  }
+
+  .resultsSection {
+		width: 100%;
+  }
+
+  .food-breakdown-table thead th {
+		border-bottom: 2px solid #ddd;
+		text-align: left;
+		padding: 12px;
+		font-weight: bold;
+		font-size: 14px;
+		color: #fff;
+  }
+
+  .food-breakdown-table tbody tr {
+		border-bottom: 1px solid #ddd;
+		width: 100%;
+  }
+
+  .food-breakdown-table td {
+		padding: 12px;
+		vertical-align: middle;
+		color: white;
+		font-size: 15px;
+  }
+
+  .food-breakdown-table td img {
+		width: 50px;
+		height: 50px;
+		object-fit: cover;
+		border-radius: 4px;
+  }
+
+  .food-breakdown-table td a {
+		color: #ffffff;
+		font-weight: bold;
+		text-decoration: none;
+  }
+
+  .food-breakdown-table .info-icon {
+		color: #333;
+		font-size: 16px;
+		cursor: pointer;
+  }
+
+  /* API Nutrition Facts */
+  .nf {
+		border: 1px solid #ffffff;
+		padding: 6px;
+		box-sizing: border-box;
+		font-family: var(--williams_calson-regular);
+		font-size: 12px;
+		line-height: 14px;
+		width: fit-content;
+  }
+
+  .nf-title {
+		font-size: 2.15em;
+		line-height: 1.15em;
+		margin-top: -6px;
+		color: #fff;
+  }
+
+  .nf-line {
+		border-top: 1px solid #fff;
+		padding: 5px 0;
+  }
+
+  .nf-highlight {
+		font-weight: bold;
+		color: #fff;
+  }
+
+  .nf-pr {
+		float: right;
+  }
+
+  .nf-bar {
+		background-color: #fff;
+  }
+
+  .nf-bar1 {
+		@extend .nf-bar;
+		height: 5px;
+  }
+
+  .nf-bar2 {
+		@extend .nf-bar;
+		height: 10px;
+  }
+
+  .nf-indent {
+		padding-left: 16px;
+  }
+
+  .nf-text-right {
+		text-align: right;
+  }
+
+  .nf-footnote {
+		padding-top: 10px;
+		font-size: 0.85em;
+		line-height: 1em;
+		color: #fff;
+  }
+
+  /* API Layout Results & Forms */
+  .results-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 90px;
+		margin-top: 20px;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+  }
+
+  .form-control {
+		display: block;
+		width: 100%;
+		padding: 0.375rem 0.75rem;
+		font-size: 17px;
+		line-height: 1.5;
+		color: #495057;
+		font-family: Arial;
+  }
+
+  /* API Typography */
+  .api-h1 {
+		font-size: 32px;
+		color: #fff;
+		width: 100%;
+  }
+
+  .api-p {
+		font-size: 25px;
+		color: #fff;
+  }
+
+  .api-caption {
+		font-size: 15px;
+		color: #fff;
   }
