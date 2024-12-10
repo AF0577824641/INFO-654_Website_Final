@@ -19,7 +19,6 @@ Additionally, the website features illustrated, step-by-step guides that simplif
 
 1. **Learn**:
    - Basics: Includes essential cooking tools and methods.
-   - Dietary Guide: Offers advice on dietary restrictions and preferences.
 
 2. **Seasons**:
    - Recipes categorized by seasonal availability of fruits and vegetables.
