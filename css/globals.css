@@ -281,7 +281,6 @@ footer-copyright {
 		color: white;
 		font-family: Arial;
 		font-weight: 500;
-
 		line-height: 28px;
 		margin-top: -1.00px;
 		position: relative;
@@ -301,6 +300,7 @@ footer-copyright {
 		justify-content: center;
 		padding: 12px 16px;
 		position: relative;
+		width: fit-content;
 }
 
 .icon {

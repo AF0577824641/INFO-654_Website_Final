@@ -6,12 +6,10 @@
   flex-direction: column;
   position: relative;
 }
-
 .global .hero {
   align-items: flex-start;
   align-self: stretch;
   background-color: var(--light-purple);
-  background-image: url(../img/hero-2.svg);
   background-position: 50% 50%;
   background-size: cover;
   display: flex;
@@ -23,26 +21,16 @@
   width: 100vw;
   flex-wrap: wrap;
 }
-.global .hero-2 {
-  align-items: flex-start;
-  align-self: stretch;
-  background-color: var(--light-purple);
-  background-image: url(../img/hero-3.svg);
-  background-position: 50% 50%;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  height: 660px;
-  justify-content: flex-end;
-  padding: 0px 50px 20px;
-  position: relative;
-  width: 100vw;
-  flex-wrap: wrap;
+  .global .hero-home {
+ background-image: url(../img/hero-2.svg);
 }
-.global .hero-seasons {
+.global .hero-2 {
+  background-image: url(../img/hero-3.svg);
+
+}
+.global .hero-rs {
   align-items: flex-start;
   align-self: stretch;
-  background-color:var(--light-purple);
   background-position: 50% 50%;
   background-size: cover;
   display: flex;
@@ -54,11 +42,42 @@
   width: 100%;
   flex-wrap: wrap;
 }
+
+.global .hero-seasons {
+  background-color: var(--light-purple);
+}
+
+.global .hero-autumn {
+  background-color: var(--dark-brown);
+}
+
+.global .hero-winter {
+  background-color: var(--dark-blue);
+}
+
+.global .hero-spring {
+  background-color: var(--green);
+}
+.global .hero-summer {
+  background-color: var(--yellow);
+}
 /* Home Content */
 .home-content {
 		align-items: flex-start;
 		align-self: stretch;
 		background-color: darkolivegreen;
+		display: flex;
+		flex: 0 0 auto;
+		justify-content: space-between;
+		padding: 30px 50px 60.95px;
+		position: relative;
+		width: 100%;
+		height: 100VH;
+}
+.page-winter {
+		align-items: flex-start;
+		align-self: stretch;
+		background-color: var(--dark-blue);
 		display: flex;
 		flex: 0 0 auto;
 		justify-content: space-between;
@@ -212,7 +231,7 @@
    background-color: #9e9e9e;
    border-radius: 5px;
    margin-bottom: 20px;
-   padding: 5px;	
+   padding: 5px;
    height: auto;
    max-width: 100%;
 }
@@ -228,10 +247,10 @@ height: auto;
 }
 
 .recipe-txt {
-    color: var(--dark-purple);
+    color: var(--white);
     font-family: var(--font-family-williams_calson-regular);
-    font-size: 20px;
+    font-size: 30px;
     margin: 5px;
     position: relative;
+    mix-blend-mode: difference;
   }
-
