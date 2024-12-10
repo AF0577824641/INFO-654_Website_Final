@@ -1,42 +1,19 @@
 # Online Cooking Guide
 
-## Project Overview
-
 **Authors**: Adonis Fuentes, Elizabeth Violi, and Klara Vertes
+---
+# Welcome to Our Cooking Guide, Kittla
+
+We created this guide as a way for young adults to be introduced to cooking in a fun, interactive, and non-judgmental manner. Not long ago, we were young individuals with an affinity for UberEats and dining out, mostly because the stress of not knowing how to cook became too debilitating to even get to step one. This website is a documentation of our journey to become the at-home chefs we wish to be, and we hope that others join us in this experiment and realize their full culinary potential as well.
+
+## Our Goal
 
 The **Online Cooking Guide** is designed to serve as an educational resource that complements or replaces traditional home economics courses. With cooking being an essential life skill, this website aims to bridge the gap for students and parents who lack access to such classes. It provides a wide array of tasty recipes that consider various dietary restrictions, making it inclusive and accessible for all users.
 
+We decided the easiest way to sort our recipes for the chef-in-training was to split them up by season, and found 12 recipes that are easy to follow and so delicious! We take into account what is in season as a way to introduce new cooks to the notion that they should cook according to the growing season. Our hope is that this website will be used as a tool by aspiring cooks to make the idea of making food less daunting.
+
 Additionally, the website features illustrated, step-by-step guides that simplify the cooking process for beginners while promoting broader understanding and accessibility.
 
----
-
-## Website Structure
-
-The website is organized as follows:
-Home/
-├── Learn/
-│ ├── Basics/
-│ │ ├── Tools
-│ │ └── Cooking Methods
-│ └── Dietary Guide/
-├── Seasons/
-│ ├── Fall/(Recipes)
-│ │ ├── Vegetables
-│ │ └── Fruits
-│ ├── Winter/(Recipes)
-│ │ ├── Vegetables
-│ │ └── Fruits
-│ ├── Spring/(Recipes)
-│ │ ├── Vegetables
-│ │ └── Fruits
-│ └── Summer/(Recipes)
-│ ├── Vegetables
-│ └── Fruits
-├── Techniques/
-├── Nutrition/
-└── About/
-
----
 
 ## Features
 
@@ -47,17 +24,9 @@ Home/
 2. **Seasons**:
    - Recipes categorized by seasonal availability of fruits and vegetables.
 
-3. **Techniques**:
-   - Step-by-step illustrated guides to teach cooking methods.
 
-4. **Nutrition**:
-   - Information on the nutritional value of recipes, including allergy and calorie data.
-
-5. **About**:
-   - Learn more about the project and its creators.
-
-6. **Contact**:
-   - A way for users to get in touch with the team.
+3. **Nutrition**:
+   - Information on the nutritional value of food.
 
 ---
 
@@ -73,16 +42,13 @@ The project will be built using:
 
 ## APIs and Data Sources
 
-We plan to integrate the **Nutritionix API** (https://www.nutritionix.com/business/api?creative=344317953788&keyword=food%20nutrition%20api&matchtype=b&network=g&device=m) to provide:
+---
+We integrated the **[Nutritionix API](https://www.nutritionix.com/business/api?creative=344317953788&keyword=food%20nutrition%20api&matchtype=b&network=g&device=m)** to provide:
 
-- Comprehensive recipe data.
-- Allergy and dietary restriction information.
-- Calorie and nutrient profiles.
+- **Calorie and Nutrient Profiles**
+  - Get accurate calorie counts and detailed nutrient breakdowns to help you make informed dietary choices.
+  
+- **Dynamic Serving Size Adjustments**
+  - Modify serving sizes and automatically update nutrition facts to reflect the changes, ensuring accurate dietary information tailored to your needs.
 
 ---
-
-## Goals
-
-- Create a resourceful website that accommodates diverse dietary needs.
-- Promote accessibility through illustrated guides and thoughtful design.
-- Build a scalable platform that serves as a complete cooking guide for learners of all levels.
