@@ -13,20 +13,21 @@ body {
 .global .hero,
 .global .hero-2,
 .global .hero-seasons {
-    align-items: flex-start;
+    align-items: flex-end;
     align-self: stretch;
     background-color: var(--light-purple);
     background-position: 50% 50%;
     background-size: cover;
     display: flex;
-    flex-direction: column;
-    height: 603px;
-    justify-content: flex-end;
+    flex-direction: row;
+    height: 500px;
+    justify-content: space-between;
     padding: 0px 50px 20px;
     position: relative;
     width: 100%;
-    flex-wrap: wrap;
-    height: 100vh;
+    flex-wrap: nowrap;
+    /* height: 100vh; */
+    align-content: flex-end;
 }
   .global .hero-home {
  background-image: url(../img/hero-2.svg);
@@ -36,7 +37,7 @@ body {
 
 }
 .global .hero-rs {
-  align-items: flex-start;
+  align-items: baseline;
   align-self: stretch;
   background-position: 50% 50%;
   background-size: cover;
@@ -46,7 +47,7 @@ body {
   justify-content: flex-end;
   padding: 0px 50px 20px;
   position: relative;
-  width: 100%;
+  width: 100vw;
   flex-wrap: wrap;
 }
 
