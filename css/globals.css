@@ -26,6 +26,7 @@ body {
     position: relative;
     width: 100%;
     flex-wrap: wrap;
+    height: 100vh;
 }
   .global .hero-home {
  background-image: url(../img/hero-2.svg);
