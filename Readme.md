@@ -1,53 +1,64 @@
-# Online Cooking Guide
+# Kittla Kitchen - Seasonal Cooking Guide
 
-**Authors**: Adonis Fuentes, Elizabeth Violi, and Klara Vertes
----
-# Welcome to Our Cooking Guide, Kittla
+Welcome to Kittla Kitchen! A user-friendly cooking guide designed for busy individuals who want to make delicious, seasonal meals without the stress.
 
-We created this guide as a way for young adults to be introduced to cooking in a fun, interactive, and non-judgmental manner. Not long ago, we were young individuals with an affinity for UberEats and dining out, mostly because the stress of not knowing how to cook became too debilitating to even get to step one. This website is a documentation of our journey to become the at-home chefs we wish to be, and we hope that others join us in this experiment and realize their full culinary potential as well.
+## About
 
-## Our Goal
-
-The **Online Cooking Guide** is designed to serve as an educational resource that complements or replaces traditional home economics courses. With cooking being an essential life skill, this website aims to bridge the gap for students and parents who lack access to such classes. It provides a wide array of tasty recipes that consider various dietary restrictions, making it inclusive and accessible for all users.
-
-We decided the easiest way to sort our recipes for the chef-in-training was to split them up by season, and found 12 recipes that are easy to follow and so delicious! We take into account what is in season as a way to introduce new cooks to the notion that they should cook according to the growing season. Our hope is that this website will be used as a tool by aspiring cooks to make the idea of making food less daunting.
-
-Additionally, the website features illustrated, step-by-step guides that simplify the cooking process for beginners while promoting broader understanding and accessibility.
-
+At Kittla Kitchen, we believe that time is precious, and cooking shouldn't be overwhelming. Our platform provides easy-to-follow recipes that celebrate seasonal ingredients and satisfy various cravings - from quick dinners to sweet treats.
 
 ## Features
 
-1. **Learn**:
-   - Basics: Includes essential cooking tools and methods.
-
-2. **Seasons**:
-   - Recipes categorized by seasonal availability of fruits and vegetables.
-
-
-3. **Nutrition**:
-   - Information on the nutritional value of food.
-
----
+- **Seasonal Recipe Collections**: Organized by Winter, Spring, Summer, and Fall
+- **Interactive Cooking Guides**: Step-by-step instructions with illustrations
+- **Nutrition Information**: Powered by Nutritionix API
+- **Measurement Converter**: Easy conversion between metric and US standard units
 
 ## Technology Stack
 
-The project will be built using:
+- HTML
+- CSS
+- JavaScript
+- Nutritionix API Integration
 
-- **HTML**: For structuring the web pages and subpages.
-- **CSS**: For managing colors, text styles, and overall component styling.
-- **JavaScript**: To enable interactivity, such as measurement conversions (e.g., metric to US standard).
+## Recipe Collections
 
----
+### Winter
+- [Lasagna Soup](https://www.acozykitchen.com/lasagna-soup)
+- [Potato and Leek Soup](https://www.foodnetwork.com/recipes/robert-irvine/potato-leek-soup-recipe-1947431)
+- [French Hot Chocolate](https://goodfooddiscoveries.com/authentic-french-hot-chocolate/)
 
-## APIs and Data Sources
+### Spring
+- [Strawberry Muffins](https://cafehailee.com/recipes/strawberry-muffins/)
+- [Zucchini Gratin](https://desertislanddishes.co/courgette-gratin-gratin-de-courgettes/)
+- [Hawaiian Chicken Kabobs](https://www.cookingclassy.com/hawaiian-chicken-kebabs/)
 
----
-We integrated the **[Nutritionix API](https://www.nutritionix.com/business/api?creative=344317953788&keyword=food%20nutrition%20api&matchtype=b&network=g&device=m)** to provide:
+### Summer
+- [Cucumber Salad](https://takestwoeggs.com/din-taifung-cucumber-salad/)
+- [Tomato and Ricotta Pasta](https://goodfooddiscoveries.com/roasted-tomato-and-garlic-ricotta-pasta/#wpzoom-premium-recipe-card)
+- [Fried Squash Blossoms](https://cafehailee.com/recipes/fried-squash-blossoms/)
 
-- **Calorie and Nutrient Profiles**
-  - Get accurate calorie counts and detailed nutrient breakdowns to help you make informed dietary choices.
-  
-- **Dynamic Serving Size Adjustments**
-  - Modify serving sizes and automatically update nutrition facts to reflect the changes, ensuring accurate dietary information tailored to your needs.
+### Fall
+- [Carrot Cake](https://www.acozykitchen.com/mini-carrot-cake)
+- [Mac and Cheese](https://mxriyum.com/the-best-mac-cheese/)
+- [Caramelized Onion Mashed Potatoes](https://shortgirltallorder.com/vegan-caramelized-onion-mashed-potatoes)
 
----
+## Authors
+
+- Adonis Fuentes
+- Elizabeth Violi
+- Klara Vertes
+
+## Educational Purpose
+
+This guide serves as a modern alternative to traditional home economics courses, making cooking accessible and enjoyable for everyone, regardless of their experience level.
+
+## Getting Started
+
+Visit our website to explore seasonal recipes, learn cooking basics, and access nutritional information for each dish.
+
+## API Integration
+
+We use the Nutritionix API to provide:
+- Accurate calorie counts
+- Detailed nutrient breakdowns
+- Dynamic serving size adjustments
