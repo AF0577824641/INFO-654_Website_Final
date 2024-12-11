@@ -11,7 +11,6 @@ At Kittla Kitchen, we believe that time is precious, and cooking shouldn't be ov
 - **Seasonal Recipe Collections**: Organized by Winter, Spring, Summer, and Fall
 - **Interactive Cooking Guides**: Step-by-step instructions with illustrations
 - **Nutrition Information**: Powered by Nutritionix API
-- **Measurement Converter**: Easy conversion between metric and US standard units
 
 ## Technology Stack
 
