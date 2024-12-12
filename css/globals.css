@@ -363,7 +363,7 @@ footer-copyright {
 
 .h2-italic {
 		color: white;
-		font-family: williams_calson-italic;
+		font-family: var(--font-family-williams_calson-italic);
 		font-size: 120px;
 		font-style: italic;
 		font-weight: 400;
@@ -397,7 +397,7 @@ footer-copyright {
     width: 602.99px;
   }
 .subtitle-italic {
-  font-family:var();
+  font-family:var(--font-family-williams_calson);
   font-style: italic;
   font-weight: 400;
   color: var(--valhalla);
