@@ -1,4 +1,16 @@
+body {
+    margin: 0;
+}
 
+.subtitle img {
+    max-width: 800px;
+    height: auto;
+}
+
+.nav-content a {
+    color: inherit;
+    text-decoration: none;
+}
 /* Content Areas */
 .home-content,
 .api-content {
